@@ -1,14 +1,11 @@
-{% load static %}
+{% extends "layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <h1>Hello World, the templates is working</h1>
-</body>
-</html>
+{% block title %}
+Home layout/Page
+{% endblock %}
+
+{% block content %}
+<h1 class="bg-amber-500 text-xl">The value is changed || Home</h1>
+<p class='text-4xl'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque similique perspiciatis quidem necessitatibus sapiente optio cumque corporis, temporibus nihil magni repellendus minima doloribus sint sequi. Magni facere natus reiciendis aperiam?</p>
+
+{% endblock %}

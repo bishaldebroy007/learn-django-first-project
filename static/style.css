@@ -5,7 +5,9 @@ body {
     padding: 20px;
 }
 
-h1 {
+h1,
+nav,
+p {
     color: #ffffff;
     text-align: center;
 }

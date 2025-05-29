@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include #include is added for the new app.
 
 from . import views  # I had to import this
 
@@ -24,7 +24,9 @@ urlpatterns = [
     
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact')
+    path('contact/', views.contact, name='contact'),
+    path('chai/', include('chai.urls')), # From the new app chai urls
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
 
 
